@@ -9,5 +9,12 @@
 #import "User.h"
 
 @implementation User
+@synthesize apigeeUser, loggedIn;
+
+-(void)loginUser:(ApigeeUser*)aUser
+{
+    self.apigeeUser = aUser;
+    self.loggedIn = true;
+}
 
 @end

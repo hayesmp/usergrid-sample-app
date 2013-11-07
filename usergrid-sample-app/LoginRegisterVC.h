@@ -7,7 +7,30 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
 
-@interface LoginRegisterVC : UIViewController
+@class User;
+
+@interface LoginRegisterVC : UIViewController {
+    UITextField* email;
+    UITextField* password;
+    UITextField* name;
+    
+    UIButton* loginButton;
+    UIButton* registerButton;
+    
+    AppDelegate *appDelegate;
+    
+    User* user;
+}
+@property (nonatomic, strong) IBOutlet UITextField* name;
+@property (nonatomic, strong) IBOutlet UITextField* email;
+@property (nonatomic, strong) IBOutlet UITextField* password;
+@property (nonatomic, strong) IBOutlet UIButton* loginButton;
+@property (nonatomic, strong) IBOutlet UIButton* registerButton;
+@property (nonatomic, strong) User* user;
+
+-(IBAction)loginUser:(id)sender;
+-(IBAction)registerUser:(id)sender;
 
 @end

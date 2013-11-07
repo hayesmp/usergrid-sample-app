@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <ApigeeiOSSDK/ApigeeUser.h>
 
-@interface User : NSObject
+@interface User : NSObject {
+    ApigeeUser* apigeeUser;
+    BOOL loggedIn;
+}
+@property (nonatomic, strong) ApigeeUser* apigeeUser;
+@property (nonatomic, assign) BOOL loggedIn;
 
+-(void)loginUser:(ApigeeUser*)aUser;
 @end
