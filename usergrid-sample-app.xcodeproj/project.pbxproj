@@ -19,6 +19,26 @@
 		BA77652A182BF3E900A2F3EF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA776512182BF3E900A2F3EF /* UIKit.framework */; };
 		BA776532182BF3E900A2F3EF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA776530182BF3E900A2F3EF /* InfoPlist.strings */; };
 		BA776534182BF3E900A2F3EF /* usergrid_sample_appTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA776533182BF3E900A2F3EF /* usergrid_sample_appTests.m */; };
+		BA776540182BF4E900A2F3EF /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BA77653E182BF4E900A2F3EF /* HomeVC.m */; };
+		BA776541182BF4E900A2F3EF /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BA77653E182BF4E900A2F3EF /* HomeVC.m */; };
+		BA776542182BF4E900A2F3EF /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA77653F182BF4E900A2F3EF /* HomeVC.xib */; };
+		BA776543182BF4E900A2F3EF /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA77653F182BF4E900A2F3EF /* HomeVC.xib */; };
+		BA776547182BF8C400A2F3EF /* LoginRegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BA776545182BF8C400A2F3EF /* LoginRegisterVC.m */; };
+		BA776548182BF8C400A2F3EF /* LoginRegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BA776545182BF8C400A2F3EF /* LoginRegisterVC.m */; };
+		BA776549182BF8C400A2F3EF /* LoginRegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA776546182BF8C400A2F3EF /* LoginRegisterVC.xib */; };
+		BA77654A182BF8C400A2F3EF /* LoginRegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA776546182BF8C400A2F3EF /* LoginRegisterVC.xib */; };
+		BA77654C182C06FB00A2F3EF /* ApigeeiOSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA77654B182C06FB00A2F3EF /* ApigeeiOSSDK.framework */; };
+		BA77654E182C076500A2F3EF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA77654D182C076500A2F3EF /* Security.framework */; };
+		BA776550182C076F00A2F3EF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA77654F182C076F00A2F3EF /* SystemConfiguration.framework */; };
+		BA776552182C077C00A2F3EF /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA776551182C077C00A2F3EF /* CoreTelephony.framework */; };
+		BA776554182C078400A2F3EF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA776553182C078400A2F3EF /* CoreLocation.framework */; };
+		BA776556182C078E00A2F3EF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA776555182C078E00A2F3EF /* MapKit.framework */; };
+		BA776559182C0FF700A2F3EF /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = BA776558182C0FF700A2F3EF /* User.m */; };
+		BA77655A182C0FF700A2F3EF /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = BA776558182C0FF700A2F3EF /* User.m */; };
+		BA77655D182C17CE00A2F3EF /* loginRegisterVCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA77655B182C17CE00A2F3EF /* loginRegisterVCTests.m */; };
+		BA77655E182C17CE00A2F3EF /* loginRegisterVCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA77655B182C17CE00A2F3EF /* loginRegisterVCTests.m */; };
+		BA77655F182C17CE00A2F3EF /* homeVCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA77655C182C17CE00A2F3EF /* homeVCTests.m */; };
+		BA776560182C17CE00A2F3EF /* homeVCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA77655C182C17CE00A2F3EF /* homeVCTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +68,22 @@
 		BA77652F182BF3E900A2F3EF /* usergrid-sample-appTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "usergrid-sample-appTests-Info.plist"; sourceTree = "<group>"; };
 		BA776531182BF3E900A2F3EF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BA776533182BF3E900A2F3EF /* usergrid_sample_appTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = usergrid_sample_appTests.m; sourceTree = "<group>"; };
+		BA77653D182BF4E900A2F3EF /* HomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
+		BA77653E182BF4E900A2F3EF /* HomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
+		BA77653F182BF4E900A2F3EF /* HomeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
+		BA776544182BF8C400A2F3EF /* LoginRegisterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginRegisterVC.h; sourceTree = "<group>"; };
+		BA776545182BF8C400A2F3EF /* LoginRegisterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginRegisterVC.m; sourceTree = "<group>"; };
+		BA776546182BF8C400A2F3EF /* LoginRegisterVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginRegisterVC.xib; sourceTree = "<group>"; };
+		BA77654B182C06FB00A2F3EF /* ApigeeiOSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ApigeeiOSSDK.framework; sourceTree = "<group>"; };
+		BA77654D182C076500A2F3EF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		BA77654F182C076F00A2F3EF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		BA776551182C077C00A2F3EF /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		BA776553182C078400A2F3EF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		BA776555182C078E00A2F3EF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		BA776557182C0FF700A2F3EF /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		BA776558182C0FF700A2F3EF /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		BA77655B182C17CE00A2F3EF /* loginRegisterVCTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginRegisterVCTests.m; sourceTree = "<group>"; };
+		BA77655C182C17CE00A2F3EF /* homeVCTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homeVCTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +91,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA776556182C078E00A2F3EF /* MapKit.framework in Frameworks */,
+				BA776554182C078400A2F3EF /* CoreLocation.framework in Frameworks */,
+				BA776552182C077C00A2F3EF /* CoreTelephony.framework in Frameworks */,
+				BA776550182C076F00A2F3EF /* SystemConfiguration.framework in Frameworks */,
+				BA77654E182C076500A2F3EF /* Security.framework in Frameworks */,
 				BA776511182BF3E900A2F3EF /* CoreGraphics.framework in Frameworks */,
+				BA77654C182C06FB00A2F3EF /* ApigeeiOSSDK.framework in Frameworks */,
 				BA776513182BF3E900A2F3EF /* UIKit.framework in Frameworks */,
 				BA77650F182BF3E900A2F3EF /* Foundation.framework in Frameworks */,
 			);
@@ -96,6 +138,12 @@
 		BA77650D182BF3E900A2F3EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BA776555182C078E00A2F3EF /* MapKit.framework */,
+				BA776553182C078400A2F3EF /* CoreLocation.framework */,
+				BA776551182C077C00A2F3EF /* CoreTelephony.framework */,
+				BA77654F182C076F00A2F3EF /* SystemConfiguration.framework */,
+				BA77654D182C076500A2F3EF /* Security.framework */,
+				BA77654B182C06FB00A2F3EF /* ApigeeiOSSDK.framework */,
 				BA77650E182BF3E900A2F3EF /* Foundation.framework */,
 				BA776510182BF3E900A2F3EF /* CoreGraphics.framework */,
 				BA776512182BF3E900A2F3EF /* UIKit.framework */,
@@ -107,6 +155,14 @@
 		BA776514182BF3E900A2F3EF /* usergrid-sample-app */ = {
 			isa = PBXGroup;
 			children = (
+				BA776557182C0FF700A2F3EF /* User.h */,
+				BA776558182C0FF700A2F3EF /* User.m */,
+				BA77653D182BF4E900A2F3EF /* HomeVC.h */,
+				BA77653E182BF4E900A2F3EF /* HomeVC.m */,
+				BA77653F182BF4E900A2F3EF /* HomeVC.xib */,
+				BA776544182BF8C400A2F3EF /* LoginRegisterVC.h */,
+				BA776545182BF8C400A2F3EF /* LoginRegisterVC.m */,
+				BA776546182BF8C400A2F3EF /* LoginRegisterVC.xib */,
 				BA77651D182BF3E900A2F3EF /* AppDelegate.h */,
 				BA77651E182BF3E900A2F3EF /* AppDelegate.m */,
 				BA776520182BF3E900A2F3EF /* Images.xcassets */,
@@ -129,6 +185,8 @@
 		BA77652D182BF3E900A2F3EF /* usergrid-sample-appTests */ = {
 			isa = PBXGroup;
 			children = (
+				BA77655B182C17CE00A2F3EF /* loginRegisterVCTests.m */,
+				BA77655C182C17CE00A2F3EF /* homeVCTests.m */,
 				BA776533182BF3E900A2F3EF /* usergrid_sample_appTests.m */,
 				BA77652E182BF3E900A2F3EF /* Supporting Files */,
 			);
@@ -220,7 +278,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA776519182BF3E900A2F3EF /* InfoPlist.strings in Resources */,
+				BA776542182BF4E900A2F3EF /* HomeVC.xib in Resources */,
 				BA776521182BF3E900A2F3EF /* Images.xcassets in Resources */,
+				BA776549182BF8C400A2F3EF /* LoginRegisterVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +289,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA776532182BF3E900A2F3EF /* InfoPlist.strings in Resources */,
+				BA77654A182BF8C400A2F3EF /* LoginRegisterVC.xib in Resources */,
+				BA776543182BF4E900A2F3EF /* HomeVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,8 +301,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA776559182C0FF700A2F3EF /* User.m in Sources */,
+				BA776540182BF4E900A2F3EF /* HomeVC.m in Sources */,
 				BA77651F182BF3E900A2F3EF /* AppDelegate.m in Sources */,
 				BA77651B182BF3E900A2F3EF /* main.m in Sources */,
+				BA776547182BF8C400A2F3EF /* LoginRegisterVC.m in Sources */,
+				BA77655D182C17CE00A2F3EF /* loginRegisterVCTests.m in Sources */,
+				BA77655F182C17CE00A2F3EF /* homeVCTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,7 +315,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA77655A182C0FF700A2F3EF /* User.m in Sources */,
+				BA776560182C17CE00A2F3EF /* homeVCTests.m in Sources */,
 				BA776534182BF3E900A2F3EF /* usergrid_sample_appTests.m in Sources */,
+				BA776541182BF4E900A2F3EF /* HomeVC.m in Sources */,
+				BA77655E182C17CE00A2F3EF /* loginRegisterVCTests.m in Sources */,
+				BA776548182BF8C400A2F3EF /* LoginRegisterVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,9 +431,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Volumes/Ten/Users/ender/Projects/usergrid-sample-app",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "usergrid-sample-app/usergrid-sample-app-Prefix.pch";
 				INFOPLIST_FILE = "usergrid-sample-app/usergrid-sample-app-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -372,9 +452,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Volumes/Ten/Users/ender/Projects/usergrid-sample-app",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "usergrid-sample-app/usergrid-sample-app-Prefix.pch";
 				INFOPLIST_FILE = "usergrid-sample-app/usergrid-sample-app-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

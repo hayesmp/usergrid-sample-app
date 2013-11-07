@@ -7,14 +7,36 @@
 //
 
 #import "AppDelegate.h"
+#import "HomeVC.h"
+#import "User.h"
+
+NSString* const orgName = @"my_organization"; //YOUR-ORG
+NSString* const appName = @"my_app"; //YOUR-APP
+NSString* const nodeUrl = @"http://192.237.176.205:8080"; //BASE-URL
 
 @implementation AppDelegate
+@synthesize user, homeVC;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //Replace 'AppDelegate' with the name of your app delegate class to instantiate it
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    //Instantiate ApigeeClient to initialize the SDK
+    appDelegate.apigeeClient = [[ApigeeClient alloc] initWithOrganizationId:orgName applicationId:appName baseURL:nodeUrl];
+    
+    //Retrieve instances of ApigeeClient.monitoringClient and ApigeeClient.dataClient
+    self.monitoringClient = [appDelegate.apigeeClient monitoringClient]; //used to call App Monitoring methods
+    self.dataClient = [appDelegate.apigeeClient dataClient]; //used to call data methods
+    
+    self.user = User.new;
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    
+    self.homeVC = HomeVC.new;
+    self.homeVC.user = self.user;
+    
+    self.window.rootViewController = homeVC;
     [self.window makeKeyAndVisible];
     return YES;
 }
