@@ -18,7 +18,7 @@
 @end
 
 @implementation HomeVC
-@synthesize map, locationManager, loginRegVC, user, currLatitude, currLongitude;
+@synthesize map, locationManager, loginRegVC, user;
 @synthesize currentLocation = _currentLocation;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -126,7 +126,31 @@
 
 -(IBAction)refresh:(id)sender
 {
+    NSString *type = @"map_marker";
+	
+	AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+	ApigeeCollection *collection = [[ApigeeCollection alloc] init:appDelegate.dataClient type:type qs:nil];
     
+	@try {
+        NSMutableArray* markers = NSMutableArray.new;
+        ApigeeClientResponse* response = [collection fetch];
+        
+        for (NSDictionary* entity in [response.response objectForKey:@"entities"]) {
+            NSLog(@"%@", entity);
+            CLLocationCoordinate2D entityLocation = CLLocationCoordinate2DMake([[entity objectForKey:@"latitude"] floatValue],[[entity objectForKey:@"longitude"] floatValue]);
+            Marker *annotation = [[Marker alloc] initWithName:[entity objectForKey:@"label"]
+                                                   coordinate:entityLocation];
+            [markers addObject:annotation];
+        }
+        [self.map removeAnnotations:self.map.annotations];
+        [self.map addAnnotations:markers];
+        [self printMapMarkers];
+	}
+	@catch (NSException * e) {
+	    UIAlertView* syncFail = [[UIAlertView alloc] initWithTitle:@"Refresh Failure" message:e.description delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [syncFail show];
+	}
+
 }
 
 -(IBAction)checkIn:(id)sender
@@ -150,9 +174,7 @@
 	    NSLog(@"%@", response.rawResponse);
         Marker *annotation = [[Marker alloc] initWithName:self.user.name coordinate:self.currentLocation];
         [self.map addAnnotation:annotation];
-        for (Marker* point in self.map.annotations) {
-            NSLog(@"%@ %f, %f", point.title, point.coordinate.latitude, point.coordinate.longitude);
-        }
+        [self printMapMarkers];
 	}
 	@catch (NSException * e) {
 	    UIAlertView* syncFail = [[UIAlertView alloc] initWithTitle:@"Sync Failure" message:e.description delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
@@ -169,5 +191,13 @@
         [randomString appendFormat: @"%c", [letters characterAtIndex: arc4random()%[letters length]]];
     str = [NSString stringWithFormat:@"%@", randomString];
     return str;
+}
+
+-(void)printMapMarkers
+{
+    for (Marker* point in self.map.annotations) {
+        NSLog(@"%@ %f, %f", point.title, point.coordinate.latitude, point.coordinate.longitude);
+    }
+    NSLog(@"markers: %i", self.map.annotations.count);
 }
 @end
