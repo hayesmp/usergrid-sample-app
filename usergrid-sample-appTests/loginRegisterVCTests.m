@@ -29,7 +29,7 @@
     [super tearDown];
 }
 
-- (void)test
+- (void)testSuccessfulLoginSavesUserData
 {
     XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
 }

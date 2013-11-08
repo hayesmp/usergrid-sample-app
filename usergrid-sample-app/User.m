@@ -9,12 +9,17 @@
 #import "User.h"
 
 @implementation User
-@synthesize apigeeUser, loggedIn;
+@synthesize apigeeUser, loggedIn, name;
 
--(void)loginUser:(ApigeeUser*)aUser
+-(void)loginUser:(NSString*)aUserName
 {
-    self.apigeeUser = aUser;
+    self.name = aUserName;
     self.loggedIn = true;
 }
 
+-(void)logout
+{
+    self.name = nil;
+    self.loggedIn = false;
+}
 @end

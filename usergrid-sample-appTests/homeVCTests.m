@@ -8,6 +8,9 @@
 
 #import <XCTest/XCTest.h>
 #include "HomeVC.h"
+#include "User.h"
+
+@class User;
 
 @interface homeVCTests : XCTestCase {
     HomeVC* homeVC;
@@ -21,7 +24,7 @@
 {
     [super setUp];
     
-    homeVC = HomeVC.new;
+    homeVC = [[HomeVC alloc] initWithNibName:@"HomeVC" bundle:nil];
     [homeVC viewDidLoad];
 }
 
@@ -31,18 +34,6 @@
     [super tearDown];
 }
 
-- (void)testHomeHasCameraButton
-{
-    XCTAssertNotNil(homeVC.camera, @"Camera is not nil");
-}
-
-- (void)testHomeCameraButtonLaunchesModalCameraVC
-{
-    [homeVC.camera.target performSelector:NSSelectorFromString(@"capture:x")];
-    XCTAssertNotNil(homeVC.cameraView, @"CamerView is not nil.");
-    
-}
-
 - (void)testHomeHasMap
 {
     XCTAssertNotNil(homeVC.map, @"Map is not nil.");
@@ -50,7 +41,7 @@
 
 - (void)testHomeHasMapTypeHybrid
 {
-    XCTAssertEqual(homeVC.map.mapType, 2, @"Map type is hybrid(2)");
+    XCTAssertEqual(homeVC.map.mapType, MKMapTypeHybrid, @"Map type is hybrid(2)");
 }
 
 - (void)testHomeHasMapWithMyLocation
@@ -60,6 +51,20 @@
     XCTAssertEqual(homeVC.map.centerCoordinate.latitude, checkpoint.latitude, @"Map shows my location.");
 }
 
+- (void)testIfNoUserIsLoggedInShowLoginScreen
+{
+    homeVC.user = User.new;
+    [homeVC viewDidAppear:false];
+    XCTAssertNotNil(homeVC.loginRegVC, @"Login Screen is not nil");
+}
+
+- (void)testIfUserIsLoggedInDontShowLoginScreen
+{
+    homeVC.user = User.new;
+    ApigeeUser* aUser = ApigeeUser.new;
+    [homeVC.user loginUser:aUser];
+    XCTAssertNil(homeVC.loginRegVC, @"Login screen is nil");
+}
 
 
 @end

@@ -32,5 +32,6 @@
 
 -(IBAction)loginUser:(id)sender;
 -(IBAction)registerUser:(id)sender;
+-(void)processLogin:(ApigeeUser*)aUser;
 
 @end

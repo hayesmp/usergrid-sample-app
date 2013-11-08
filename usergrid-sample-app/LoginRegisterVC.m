@@ -42,7 +42,7 @@
 {
     [appDelegate.dataClient addUser:self.email.text email:self.email.text name:self.name.text password:self.password.text completionHandler:^(ApigeeClientResponse *response) {
         if ([response completedSuccessfully]) {
-            [self.user loginUser:response.user];
+            [self processLogin:self.name.text];
             [self dismissViewControllerAnimated:true completion:nil];
         } else {
             UIAlertView* regFail = [[UIAlertView alloc] initWithTitle:@"Failure"
@@ -57,7 +57,8 @@
 {
     [appDelegate.dataClient logInUser:self.email.text password:self.password.text completionHandler:^(ApigeeClientResponse *response) {
         if ([response completedSuccessfully]) {
-            [self.user loginUser:response.user];
+            NSLog(@"%@", [[response.response objectForKey:@"user"] objectForKey:@"name"]);
+            [self processLogin:[[response.response objectForKey:@"user"] objectForKey:@"name"]];
             [self dismissViewControllerAnimated:true completion:nil];
         } else {
             UIAlertView* loginFail = [[UIAlertView alloc] initWithTitle:@"Failure"
@@ -66,6 +67,8 @@
         }
     }];
 }
-
-
+-(void)processLogin:(NSString*)aUserName
+{
+    [self.user loginUser:aUserName];
+}
 @end

@@ -15,18 +15,29 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CC6-IV-5FQ">
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CC6-IV-5FQ">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="bZg-9e-PF6"/>
+                    </connections>
                 </mapView>
                 <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ilf-SH-tT2">
                     <rect key="frame" x="0.0" y="23" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <items>
                         <barButtonItem width="14" style="plain" systemItem="fixedSpace" id="6JT-nN-RKY"/>
-                        <barButtonItem systemItem="refresh" id="i8T-Ve-o78"/>
+                        <barButtonItem systemItem="refresh" id="i8T-Ve-o78">
+                            <connections>
+                                <action selector="refresh:" destination="-1" id="ERa-pH-6OL"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Kj5-3l-t8f"/>
-                        <barButtonItem title="Check-In" id="Fuy-s0-PbW"/>
+                        <barButtonItem title="Check-In" id="Fuy-s0-PbW">
+                            <connections>
+                                <action selector="checkIn:" destination="-1" id="eGe-XN-gV6"/>
+                            </connections>
+                        </barButtonItem>
                     </items>
                 </toolbar>
             </subviews>

@@ -11,10 +11,13 @@
 
 @interface User : NSObject {
     ApigeeUser* apigeeUser;
+    NSString* name;
     BOOL loggedIn;
 }
 @property (nonatomic, strong) ApigeeUser* apigeeUser;
+@property (nonatomic, strong) NSString* name;
 @property (nonatomic, assign) BOOL loggedIn;
 
--(void)loginUser:(ApigeeUser*)aUser;
+-(void)loginUser:(NSString*)aUserName;
+-(void)logout;
 @end
